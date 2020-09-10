@@ -6,8 +6,9 @@ import {auth} from "../../firebase/firebase.utils";
 import "./header.styles.scss"
 import {connect} from "react-redux";
 import CartIcon from "../cart-icon/cart-icon.component";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
-const Header = ({currentUser}) => {
+const Header = ({currentUser, isDropdownHidden}) => {
   return (
     <header className="header">
       <Link className="logo-container" to="/">
@@ -27,12 +28,14 @@ const Header = ({currentUser}) => {
         }
         <CartIcon/>
       </div>
+      {!isDropdownHidden && <CartDropdown/>}
     </header>
   )
 };
 
 const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser
+  currentUser: state.user.currentUser,
+  isDropdownHidden: state.cart.hidden,
 });
 
 export default connect(mapStateToProps)(Header);
