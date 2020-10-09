@@ -7,8 +7,6 @@ import {HeaderContainer, LogoContainer, OptionLink, OptionsContainer} from "./he
 
 import {auth} from "../../firebase/firebase.utils";
 
-import "./header.styles.scss"
-
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import {selectCartHidden} from "../../redux/cart/cart.selectors"
