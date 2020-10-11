@@ -15,7 +15,7 @@ import {selectCurrentUser} from "../../redux/user/user.selectors"
 const Header = ({currentUser, isDropdownHidden}) => {
   return (
     <HeaderContainer>
-      <LogoContainer>
+      <LogoContainer to="/">
         <Logo/>
       </LogoContainer>
       <OptionsContainer>
