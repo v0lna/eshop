@@ -14,6 +14,10 @@ export const ItemDetails = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 10px 20px;
+  
+  ${CartItemContainer} {
+    color: red;
+  }
 `;
 
 export const CartIconName = styled.span`

@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import CustomButton from "../custom-button/custom-button.component";
 
+export const AddButton = styled(CustomButton)`
+  width: 80%;
+  opacity: 0.7;
+  position: absolute;
+  top: 255px;
+  display: none;
+`;
+
 export const CollectionItemContainer = styled.div`
   width: 22vw;
   display: flex;
@@ -13,9 +21,11 @@ export const CollectionItemContainer = styled.div`
     .image {
       opacity: 0.8;
     }
-    button {
+
+    ${AddButton} {
       opacity: 0.85;
       display: flex;
+      border: 1px solid red;
     }
   }
 `;
@@ -45,12 +55,4 @@ export const CollectionItemName = styled.span`
 export const CollectionItemPrice = styled.span`
   width: 10%;
   text-align: right;
-`;
-
-export const AddButton = styled(CustomButton)`
-  width: 80%;
-  opacity: 0.7;
-  position: absolute;
-  top: 255px;
-  display: none;
 `;
