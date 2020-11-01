@@ -1,19 +1,18 @@
 import React from "react";
 
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import {
   BackgroundImageContainer,
   MenuItemContainer,
   MenuItemContent,
   SubtitleContainer,
-  TitleContainer
+  TitleContainer,
 } from "./menu-item.styles";
 
-const MenuItem = ({title, imageUrl, size, history, match, linkUrl}) => {
-
+const MenuItem = ({ title, imageUrl, size, history, match, linkUrl }) => {
   const goByClick = () => {
-    history.push(`${match.url}${linkUrl}`)
+    history.push(`${match.url}${linkUrl}`);
   };
 
   return (
@@ -27,7 +26,7 @@ const MenuItem = ({title, imageUrl, size, history, match, linkUrl}) => {
         <SubtitleContainer>SHOP NOW</SubtitleContainer>
       </MenuItemContent>
     </MenuItemContainer>
-  )
+  );
 };
 
 export default withRouter(MenuItem);

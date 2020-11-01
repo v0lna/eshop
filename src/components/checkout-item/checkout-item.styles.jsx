@@ -1,7 +1,7 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 
 const widthSetter = css`
-    width: 23%;
+  width: 23%;
 `;
 
 export const CheckoutItemContainer = styled.div`
@@ -16,11 +16,11 @@ export const CheckoutItemContainer = styled.div`
 
 export const ImageContainer = styled.div`
   width: 23%;
-    padding-right: 15px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+  padding-right: 15px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const CheckoutItemName = styled.span`
@@ -29,12 +29,12 @@ export const CheckoutItemName = styled.span`
 
 export const CheckoutItemQuantity = styled.span`
   ${widthSetter}
-   display: flex;
-   
-   span {
+  display: flex;
+
+  span {
     margin: 0 10px;
   }
-  
+
   div {
     cursor: pointer;
   }

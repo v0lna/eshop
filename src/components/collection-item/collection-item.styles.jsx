@@ -16,7 +16,7 @@ export const CollectionItemContainer = styled.div`
   height: 350px;
   align-items: center;
   position: relative;
-  
+
   &:hover {
     .image {
       opacity: 0.8;
@@ -33,7 +33,7 @@ export const CollectionItemContainer = styled.div`
 export const CollectionImage = styled.div`
   width: 100%;
   height: 95%;
-  background-image: ${props => `url(${props.imageUrl})`} ;
+  background-image: ${(props) => `url(${props.imageUrl})`};
   background-size: cover;
   background-position: center;
   margin-bottom: 5px;

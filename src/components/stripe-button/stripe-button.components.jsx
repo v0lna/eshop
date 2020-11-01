@@ -1,14 +1,15 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
 
-const PUBLIC_KEY = "pk_test_51HYDHDBiNCCZs5hXQiNsEWzAh14RAzhwehxReFtC9XTf49iUxXoUPpShLMG1QgEGBq5p6skT7fyNAkkupniu672900BHLDrI6h";
+const PUBLIC_KEY =
+  "pk_test_51HYDHDBiNCCZs5hXQiNsEWzAh14RAzhwehxReFtC9XTf49iUxXoUPpShLMG1QgEGBq5p6skT7fyNAkkupniu672900BHLDrI6h";
 
-const StripeCheckoutButton = ({price}) => {
+const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
 
   const onToken = (token) => {
     console.log(token);
-    alert("Payment Successful")
+    alert("Payment Successful");
   };
 
   return (
@@ -24,7 +25,7 @@ const StripeCheckoutButton = ({price}) => {
       amount={priceForStripe}
       name={"CRWN study project"}
     />
-  )
+  );
 };
 
 export default StripeCheckoutButton;
