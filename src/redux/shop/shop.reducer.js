@@ -12,8 +12,8 @@ const shopReducer = (state = INIT_STATE, action) => {
       return {
         ...state,
         isLoading: true,
-        errorMessage: null
-      }
+        errorMessage: null,
+      };
     }
     case ShopActionType.FETCH_SUCCESS: {
       return {
@@ -26,8 +26,8 @@ const shopReducer = (state = INIT_STATE, action) => {
       return {
         ...state,
         isLoading: false,
-        errorMessage: action.payload
-      }
+        errorMessage: action.payload,
+      };
     }
     default:
       return state;

@@ -5,7 +5,7 @@ const selectShop = (state) => state.shop;
 
 export const selectShopCollections = createSelector(
   [selectShop],
-  (shop) => shop.collections,
+  (shop) => shop.collections
 );
 
 export const selectCollectionsForPreview = createSelector(
@@ -23,4 +23,9 @@ export const selectCollection = memoize((collectionUrlParam) =>
 export const selectIsCollectionsFetching = createSelector(
   [selectShop],
   (shop) => shop.isLoading
+);
+
+export const selectIsCollectionsLoaded = createSelector(
+  [selectShop],
+  (shop) => !!shop.collections
 );
